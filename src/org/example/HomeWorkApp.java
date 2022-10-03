@@ -39,7 +39,7 @@ public class HomeWorkApp {
     }
     private static void compareNumbers() {
         int a = 113;
-        int b = 1311;
+        int b = 13331;
         if (a>=b){
             System.out.println("a >= b\n");
         }
