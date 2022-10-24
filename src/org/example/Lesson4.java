@@ -7,7 +7,7 @@ import java.util.Scanner;
 public class Lesson4 {
     public static int SIZE = 3;
     public static int DOTS_TO_WIN = 3;
-    public static final char DOT_EMPTY = '•';
+    public static final char DOT_EMPTY = 'вЂў';
     public static final char DOT_X = 'X';
     public static final char DOT_O = 'O';
     public static char[][] map;
@@ -22,25 +22,25 @@ public class Lesson4 {
             humanTurn();
             printMap();
             if (checkWin(DOT_X)) {
-                System.out.println("Победил человек");
+                System.out.println("РџРѕР±РµРґРёР» С‡РµР»РѕРІРµРє");
                 break;
             }
             if (isMapFull()) {
-                System.out.println("Ничья");
+                System.out.println("РќРёС‡СЊСЏ");
                 break;
             }
             aiTurn();
             printMap();
             if (checkWin(DOT_O)) {
-                System.out.println("Победил Искуственный Интеллект");
+                System.out.println("РџРѕР±РµРґРёР» РСЃРєСѓСЃС‚РІРµРЅРЅС‹Р№ РРЅС‚РµР»Р»РµРєС‚");
                 break;
             }
             if (isMapFull()) {
-                System.out.println("Ничья");
+                System.out.println("РќРёС‡СЊСЏ");
                 break;
             }
         }
-        System.out.println("Игра закончена");
+        System.out.println("РРіСЂР° Р·Р°РєРѕРЅС‡РµРЅР°");
     }
     public static boolean checkWin(char symb) {
         int countV;
@@ -90,14 +90,14 @@ public class Lesson4 {
             x = rand.nextInt(SIZE);
             y = rand.nextInt(SIZE);
         } while (!isCellValid(x, y));
-        System.out.println("Компьютер походил в точку " + (x + 1) + " " + (y +
+        System.out.println("РљРѕРјРїСЊСЋС‚РµСЂ РїРѕС…РѕРґРёР» РІ С‚РѕС‡РєСѓ " + (x + 1) + " " + (y +
                 1));
         map[y][x] = DOT_O;
     }
     public static void humanTurn() {
         int x, y;
         do {
-            System.out.println("Введите координаты в формате X Y");
+            System.out.println("Р’РІРµРґРёС‚Рµ РєРѕРѕСЂРґРёРЅР°С‚С‹ РІ С„РѕСЂРјР°С‚Рµ X Y");
             x = sc.nextInt() - 1;
             y = sc.nextInt() - 1;
         } while (!isCellValid(x, y)); // while(isCellValid(x, y) == false)
@@ -128,7 +128,8 @@ public class Lesson4 {
             }
             System.out.println();
         }
-                System.out.println();
+        System.out.println();
     }
 }
+
 
